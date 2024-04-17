@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="root"></div>
+     </body>
+        <script src="https://resource.zegocloud.com/prebuilt/crypto-js.js"></script>
+        <script src="https://resource.zegocloud.com/prebuilt/prebuiltToken.js"></script>
+        <script src="https://zegocloud.github.io/zegocloud_prebuilt_webrtc/ZegoPrebuilt/index.umd.js"></script>
+        <script>
+            const TOKEN =generatePrebuiltToken(88, "", 'room2', 'UserID-' + Math);
+            const zp = ZegoUIKitPrebuilt.create(TOKEN);
+            zp.joinRoom({
+                container : document.querySelector("#root"),
+            });
+        </script>
+</html>
